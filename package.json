@@ -1,0 +1,25 @@
+{
+    "name": "lollang-extension-pack",
+    "displayName": "lollang extension pack",
+    "description": "lollang extension pack",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.65.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "lollang",
+            "aliases": ["lollang", "lollang"],
+            "extensions": [".lo"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "lollang",
+            "scopeName": "source.lo",
+            "path": "./syntaxes/lollang.tmLanguage.json"
+        }]
+    }
+}
