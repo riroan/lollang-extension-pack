@@ -7,26 +7,75 @@
 		},
 		{
 			"include": "#strings"
+		},
+		{
+			"include": "#comments"
+		},
+		{
+			"include": "#numbers"
+		},
+		{
+			"include": "#escape"
+		},
+		{
+			"include": "#operators"
+		},
+		{
+			"include": "#function"
 		}
 	],
 	"repository": {
-		"keywords": {
-			"patterns": [{
-				"name": "keyword.control.lollang",
-				"match": "\\b(if|while|for|return)\\b"
-			}]
+    "numbers": {
+		"patterns": [
+			{
+			"name": "constant.numeric.decimal.lollang",
+			"match": "\\bㅠ\\b|\\Bㅠ\\b|\\bㅠ\\B|\\Bㅠ\\B"
+			}
+		]
 		},
-		"strings": {
-			"name": "string.quoted.double.lollang",
-			"begin": "\"",
-			"end": "\"",
-			"patterns": [
-				{
-					"name": "constant.character.escape.lollang",
-					"match": "\\\\."
-				}
-			]
+		"comments": {
+		"name": "punctuation.definition.comment.lollang",
+		"begin": "잠만",
+		"end": "\\n"
+		},
+		"escape": {
+		"name": "keyword.control.lollang",
+		"begin": "뭐함?",
+		"end": "\\n"
+		},
+		"keywords": {
+		"patterns": [
+			{
+			"name": "keyword.control.lollang",
+			"match": "\\b(캐리좀|리쉬좀요?|갱좀요?|뭐하냐고|스왑좀|님아|저기|근데저기|근데|그니까|오라고|가라고|나가라 그냥|계속오네|진짜|우리 잘해보죠|팀차이 ㅈㅈ)"
+			}
+		]
+		},
+		"operators": {
+		"patterns": [
+			{
+			"name": "keyword.operator.lollang",
+			"match": "\\B(ㅜ|ㅡ|ㅓ|ㅏ|ㅕ|ㅑ|ㄱ|ㅋ|ㄷ|ㅌ|ㄴ|ㄹ|진짜)\\B|\\B(님|ㄹ|ㄴ)\\b|\\b(ㄴ|ㄹ)\\B|\\,|\\."
+			}
+		]
+		},
+		"function": {
+		"name": "entity.name.function.lollang",
+		"patterns": [
+			{
+			"name": "entity.name.function.lollang",
+			"match": "[가-힣0-9a-zA-Z]"
+			}
+		]
+    },
+		"variables": {
+		"patterns": [
+			{
+			"name": "variable.parameter.lollang",
+			"match": "[가-힣]"
+			}
+		]
 		}
 	},
-	"scopeName": "source.lo"
+		"scopeName": "source.lo"
 }
